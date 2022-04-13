@@ -8,14 +8,14 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>Wordle solver | PrathamPrasoon.com</title>
-                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Wordle Helper" />
                 <meta
                     name="twitter:image"
                     content="https://raw.githubusercontent.com/PrasoonPratham/wordle-nextjs-ts/main/public/Wordle.png"
                 />
             </Head>
-            <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
+            <div className="bg-gradient-to-bl from-yellow-600 via-fuchsia-300 to-blue-900">
                 <div className="w-full max-w-screen-xl mx-auto px-6">
                     <div className="flex justify-center p-4 px-3 py-10">
                         <div className="w-full max-w-md">
