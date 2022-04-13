@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+    "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["react"],
+    "rules": {
+        // enable additional rules
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        // override configuration set by extending "eslint:recommended"
+        "no-empty": "warn",
+        "no-cond-assign": ["error", "always"]
+    },
+    "overrides": [
+        {
+            "files": ["bin/*.js", "lib/*.js"],
+            "excludedFiles": "*.test.js",
+            "rules": {
+                "quotes": ["error", "single"]
+            }
+        }
+    ]
+}
