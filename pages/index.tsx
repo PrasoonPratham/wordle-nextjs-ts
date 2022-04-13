@@ -10,10 +10,7 @@ const Home: NextPage = () => {
                 <title>Wordle solver | PrathamPrasoon.com</title>
                 <meta name="twitter:card" content="Wordle" />
                 <meta name="twitter:title" content="Wordle Helper" />
-                <meta
-                    name="twitter:image"
-                    content="https://raw.githubusercontent.com/PrasoonPratham/wordle-nextjs-ts/main/public/Wordle.png"
-                />
+                <meta name="twitter:image" content="public/Wordle.png" />
             </Head>
             <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
                 <div className="w-full max-w-screen-xl mx-auto px-6">
