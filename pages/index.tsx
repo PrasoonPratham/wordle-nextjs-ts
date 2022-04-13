@@ -12,7 +12,7 @@ const Home: NextPage = () => {
                 <meta name="twitter:title" content="Wordle Helper" />
                 <meta
                     name="twitter:image"
-                    content="https://raw.githubusercontent.com/PrasoonPratham/wordle-nextjs-ts/main//Wordle.png"
+                    content="https://raw.githubusercontent.com/PrasoonPratham/wordle-nextjs-ts/main/public/Wordle.png"
                 />
             </Head>
             <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
