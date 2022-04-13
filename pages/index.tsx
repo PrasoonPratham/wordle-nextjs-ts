@@ -7,7 +7,7 @@ const Home: NextPage = () => {
         <title>Wordle solver | PrathamPrasoon.com</title>
         <meta name="twitter:card" content="Stuck? Get some help" />
         <meta name="twitter:title" content="Wordle Helper" />
-        <meta name="twitter:image" content="Wordle.png" />
+        <meta name="twitter:image" content="public/Wordle.png" />
     </Head>;
     return (
         <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
