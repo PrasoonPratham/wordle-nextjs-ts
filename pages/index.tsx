@@ -3,15 +3,11 @@ import { list } from "../constants/list";
 
 const Home: NextPage = () => {
     return (
-        <>
-            {/* component */}
+        <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
             <div className="w-full max-w-screen-xl mx-auto px-6">
                 <div className="flex justify-center p-4 px-3 py-10">
                     <div className="w-full max-w-md">
                         <div className="bg-white shadow-md rounded-lg px-3 py-2 mb-4">
-                            <div className="block text-gray-700 text-lg font-semibold py-2 px-2">
-                                Need some help? Wordle List is here 😄
-                            </div>
                             <div className="flex items-center bg-gray-200 rounded-md">
                                 <div className="pl-2">
                                     <svg
@@ -34,18 +30,19 @@ const Home: NextPage = () => {
                             </div>
                             {list.map((element) => (
                                 <h1 key={1}>
-                                    <div className="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                                        <div className="flex-grow font-medium px-2">
+                                    <div className="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2 ">
+                                        <div className="flex-grow font-medium px-2 ">
                                             {element}
                                         </div>
                                     </div>
+                                    <div className="w-full border-t border-gray-300" />
                                 </h1>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
