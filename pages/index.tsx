@@ -1,7 +1,14 @@
 import type { NextPage } from "next";
 import { list } from "../constants/list";
+import Head from "next/head";
 
 const Home: NextPage = () => {
+    <Head>
+        <title>Wordle solver | PrathamPrasoon.com</title>
+        <meta name="twitter:card" content="Stuck? Get some help" />
+        <meta name="twitter:title" content="Wordle Helper" />
+        <meta name="twitter:image" content="Wordle.png" />
+    </Head>;
     return (
         <div className="bg-gradient-to-tl from-slate-300 via-rose-200 to-sky-300">
             <div className="w-full max-w-screen-xl mx-auto px-6">
@@ -40,9 +47,7 @@ const Home: NextPage = () => {
                                 >
                                     <div
                                         className="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2 "
-                                        onClick={() =>
-                                            alert("Copied!")
-                                        }
+                                        onClick={() => alert("Copied!")}
                                     >
                                         <div className="flex-grow font-medium px-2">
                                             {element}
