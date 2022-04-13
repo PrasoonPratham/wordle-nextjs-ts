@@ -1,6 +1,6 @@
 // Future ideas 👀 https://gist.github.com/h3xx/1976236
 // List of all words
-export let list: Array<string> = [
+export const list: Array<string> = [
         "cigar",
         "rebut",
         "sissy",

@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import { list } from "./list";
+import { list } from "../constants/list";
 
 const Home: NextPage = () => {
     return (
         <>
             {list.map((element) => (
-                <h1>{element}</h1>
+                <h1 key={1}>{element}</h1>
             ))}
         </>
     );
