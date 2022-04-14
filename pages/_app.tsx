@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             'Wordle Helper is a tool to help you solve wordle puzzles.',
           images: [
             {
-              url: './wordle.png',
+              url: 'public/wordle.png',
               width: 1280,
               height: 720,
               alt: 'Wordle Helper'
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
         twitter={{
           handle: '@prasoonpratham',
-          cardType: 'summary_large_image',
+          cardType: 'summary_large_image'
         }}
       />
       <Toaster position="top-right" reverseOrder={false} />
