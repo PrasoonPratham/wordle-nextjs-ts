@@ -6,32 +6,27 @@ interface WordListProps {
   searchText: string;
 }
 
-// function find(words: Array<string>, str: any) {
-//   // split the string into an array
-//   str = str.split('');
-
-//   // `filter` returns an array of array elements according
-//   // to the specification in the callback when a new word
-//   // is passed to it
-//   return words.filter(function (word) {
-//     // that callback says to take every element
-//     // in the `str` array and see if it appears anywhere
-//     // in the word. If it does, it's a match, and
-//     // `filter` adds that word to the output array
-//     return str.every(function (char: string) {
-//       return word.includes(char);
-//     });
-//   });
-// }
-
 export const WordList = ({ searchText }: WordListProps) => {
   const filteredData = wordlist.filter(word => {
     if (!searchText) {
       return word;
     }
 
-    return word.toLowerCase().includes(searchText.toLowerCase());
-    // return find(searchText.toLowerCase(), word.toLowerCase());
+    if (searchText.startsWith("re'") && searchText.endsWith("'")) {
+      const regex = searchText.substring(3, searchText.length - 1);
+
+      try {
+        return word.match(regex);
+      } catch (exc) {
+        return false;
+      }
+    }
+
+    let wordsSplit = word.split('');
+
+    return searchText.split('').every(char => {
+      return wordsSplit.includes(char);
+    });
   });
 
   return (
