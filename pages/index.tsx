@@ -13,15 +13,15 @@ const Home: NextPage = () => {
       <Head>
         <title>Wordle solver | PrathamPrasoon.com</title>
       </Head>
-      <div className="bg-gradient-to-bl from-yellow-600 via-fuchsia-300 to-blue-900">
+      <div className="bg-gradient-to-tl from-slate-100 via-orange-700 to-fuchsia-700">
         <div className="w-full max-w-screen-xl mx-auto px-6">
           <div className="flex justify-center p-4 px-3 py-10">
             <div className="w-full max-w-md">
-              <div className="grid place-items-center text-6xl py-10 font-mono ">
-                Wordle Helper
+              <div className="grid place-items-center text-6xl py-10">
+                <span className="font-mono text-white/[.9]">Wordle Helper</span>
               </div>
-              <div className="bg-white shadow-md rounded-lg px-3 py-2 mb-4">
-                <div className="flex items-center bg-gray-200 rounded-md">
+              <div className="bg-white rounded-lg px-3 py-3 mb-4">
+                <div className="flex items-center bg-gray-200 rounded-md py-2">
                   <div className="pl-2">
                     <svg
                       className="fill-current text-gray-500 w-6 h-6"
