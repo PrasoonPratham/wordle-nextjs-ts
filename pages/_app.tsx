@@ -17,11 +17,19 @@ function MyApp({ Component, pageProps }: AppProps) {
           url: 'https://wordlehelper.prathamprasoon.com',
           title: 'Wordle Helper',
           description:
-            'Wordle Helper is a tool to help you solve wordle puzzles.'
+            'Wordle Helper is a tool to help you solve wordle puzzles.',
+          images: [
+            {
+              url: 'public/wordle.png',
+              width: 1280,
+              height: 720,
+              alt: 'Wordle Helper'
+            }
+          ]
         }}
         twitter={{
           handle: '@prasoonpratham',
-          cardType: 'summary_large_image'
+          cardType: 'summary_large_image',
         }}
       />
       <Toaster position="top-right" reverseOrder={false} />
