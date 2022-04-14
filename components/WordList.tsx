@@ -7,6 +7,7 @@ interface WordListProps {
 }
 
 export const WordList = ({ searchText }: WordListProps) => {
+  toast('Loading...');
   const filteredData = wordlist.filter(word => {
     if (!searchText) {
       return word;
@@ -35,7 +36,7 @@ export const WordList = ({ searchText }: WordListProps) => {
 
   return (
     <>
-      {filteredData.map((element: any) => (
+      {filteredData.slice(0,300).map((element: any) => (
         <h1
           key={element}
           onClick={() => navigator.clipboard.writeText(element)}

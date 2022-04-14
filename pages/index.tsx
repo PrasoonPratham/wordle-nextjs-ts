@@ -2,11 +2,13 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 import { WordList } from '../components/WordList';
-
+import { useDebounce } from 'use-debounce';
 import type { NextPage } from 'next';
+import NoSSR from 'react-no-ssr';
 
 const Home: NextPage = () => {
   const [searchText, setSearchText] = useState('');
+  const [value] = useDebounce(searchText, 1000);
 
   return (
     <>
@@ -42,7 +44,9 @@ const Home: NextPage = () => {
                     onChange={e => setSearchText(e.target.value)}
                   />
                 </div>
-                <WordList searchText={searchText} />
+                <NoSSR>
+                  <WordList searchText={value} />
+                </NoSSR>
               </div>
             </div>
           </div>
