@@ -7,7 +7,9 @@ interface WordListProps {
 }
 
 export const WordList = ({ searchText }: WordListProps) => {
-  toast('Loading...');
+  toast('Loading...', {
+    duration: 1500,
+  });
   const filteredData = wordlist.filter(word => {
     if (!searchText) {
       return word;

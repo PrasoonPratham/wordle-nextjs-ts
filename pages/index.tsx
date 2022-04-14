@@ -8,7 +8,6 @@ import NoSSR from 'react-no-ssr';
 
 const Home: NextPage = () => {
   const [searchText, setSearchText] = useState('');
-  const [value] = useDebounce(searchText, 1000);
 
   return (
     <>
@@ -22,6 +21,20 @@ const Home: NextPage = () => {
               <div className="grid place-items-center text-6xl py-10">
                 <span className="font-mono text-black/[.7]">Wordle Helper</span>
               </div>
+              <div className="col-span-12 sm:col-span-6 md:col-span-3 py-4">
+                <div className="flex flex-row bg-white shadow-sm rounded p-4">
+                  <div className="flex flex-col flex-grow ">
+                    <div className=" font-bold text-lg">
+                      How to use WordleHelper?
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      Type the letters that you know and click on the word to
+                      copy!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-white rounded-lg px-3 py-3 mb-4">
                 <div className="flex items-center bg-gray-200 rounded-md py-2">
                   <div className="pl-2">
@@ -38,6 +51,7 @@ const Home: NextPage = () => {
                   </div>
                   <input
                     className="w-full rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none py-2 px-2"
+                    autoComplete="off"
                     id="search"
                     type="text"
                     placeholder="Search for wordle words"
@@ -45,7 +59,7 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <NoSSR>
-                  <WordList searchText={value} />
+                  <WordList searchText={searchText.toLowerCase()} />
                 </NoSSR>
               </div>
             </div>
