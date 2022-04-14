@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             'Wordle Helper is a tool to help you solve wordle puzzles.',
           images: [
             {
-              url: 'public/wordle.png',
+              url: './wordle.png',
               width: 1280,
               height: 720,
               alt: 'Wordle Helper'
