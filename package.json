@@ -19,7 +19,9 @@
     "react-delay-input": "^4.1.0",
     "react-dom": "18.0.0",
     "react-hot-toast": "^2.2.0",
+    "react-intersection-observer": "^9.1.0",
     "react-no-ssr": "^1.1.0",
+    "react-query": "^3.38.0",
     "tailwindcss-filters": "^3.0.0",
     "use-debounce": "^7.0.1"
   },

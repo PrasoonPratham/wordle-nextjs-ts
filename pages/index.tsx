@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-import { WordList } from '../components/WordList';
-import type { NextPage } from 'next';
 import NoSSR from 'react-no-ssr';
+
+import { WordList } from '../components/WordList';
+
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   const [searchText, setSearchText] = useState('');
@@ -57,6 +59,7 @@ const Home: NextPage = () => {
                     onChange={e => setSearchText(e.target.value)}
                   />
                 </div>
+
                 <NoSSR>
                   <WordList searchText={searchText.toLowerCase()} />
                 </NoSSR>
